@@ -1,8 +1,13 @@
 import "./index.css";
-import { Button } from "./components/ui/button";
+import HomePage from "./pages/HomePage";
+import { ThemeProvider } from "@/components/theme-provider";
 
 function App() {
-  return <Button className="bg-red-500">coucou</Button>;
+  return (
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <HomePage />
+    </ThemeProvider>
+  );
 }
 
 export default App;
