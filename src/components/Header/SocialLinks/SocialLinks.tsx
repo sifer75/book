@@ -22,26 +22,10 @@ const links: LinkType[] = [
 
 function SocialLinks() {
   return (
-    // <div className="flex bg-blue-800 h-fit justify-start gap-5 text-yellow-100 border-2 border-black rounded-xl w-fit p-2 ">
-    //   {links.map((link: LinkType) => {
-    //     return (
-    //       <a href={link.url} key={link.title}>
-    //         <>
-    //           <button className="border group rounded-xl p-2 h-fit text-xl hover:scale-110 transition-all hover:bg-yellow-200 border-black">
-    //             <img src={link.src} alt="logo" className="w-10" />
-    //           </button>
-    //           <p className="hidden group-hover:block absolute top-5 bg-red-500">
-    //             {link.title}
-    //           </p>
-    //         </>
-    //       </a>
-    //     );
-    //   })}
-    // </div>
-    <nav aria-label="Social links">
+    <nav id="SocialLinks__container" aria-label="Social links">
       <ul className="flex gap-5 border-2 border-black rounded-xl w-fit p-2">
         {links.map((link: LinkType) => (
-          <SocialLinksNavigation link={link} />
+          <SocialLinksNavigation id="SocialLinks__button" link={link} />
         ))}
       </ul>
     </nav>
