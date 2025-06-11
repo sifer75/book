@@ -23,7 +23,7 @@ function SocialLinksNavigation({ link, id }: SocialLinksNavigationProps) {
           id={`SocialLinksNavigation__image__${id}`}
           src={link.src}
           alt={`Logo ${link.title}`}
-          className="w-14 h-14"
+          className="w-8 h-8"
           aria-hidden="true"
         />
       </a>
