@@ -1,25 +1,31 @@
 import type { LinkType } from "./types";
 
 interface SocialLinksNavigationProps {
+  id: string;
   link: LinkType;
 }
 
-function SocialLinksNavigation({ link }: SocialLinksNavigationProps) {
+function SocialLinksNavigation({ link, id }: SocialLinksNavigationProps) {
   return (
-    <li key={link.title} className="border-2 border-black rounded-xl w-fit p-2 hover:scale-110 transition-all hover:bg-yellow-200">
+    <li
+      id={`SocialLinksNavigation__list__${id}`}
+      key={link.title}
+      className="border-2 border-black rounded-xl w-fit p-2 hover:scale-110 transition-all hover:bg-yellow-200"
+    >
       <a
+        id={`SocialLinksNavigation__link__${id}`}
         href={link.url}
-
         target={link.isExternal ? "_blank" : "_self"}
         rel={link.isExternal ? "noopener noreferrer" : undefined}
         aria-label={`Lien vers ${link.title}`}
       >
-          <img
-            src={link.src}
-            alt={`Logo ${link.title}`}
-            className="w-14 h-14"
-            aria-hidden="true"
-          />
+        <img
+          id={`SocialLinksNavigation__image__${id}`}
+          src={link.src}
+          alt={`Logo ${link.title}`}
+          className="w-14 h-14"
+          aria-hidden="true"
+        />
       </a>
     </li>
   );
