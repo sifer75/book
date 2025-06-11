@@ -4,6 +4,10 @@ import CvIcon from "@/assets/cvIcon.svg";
 import type { LinkType } from "./types";
 import SocialLinksNavigation from "./SocialLinksNavigation";
 
+interface SocialLinksProps {
+  id: string;
+}
+
 const links: LinkType[] = [
   {
     title: "Linkedin",
@@ -20,12 +24,12 @@ const links: LinkType[] = [
   { title: "Cv", url: "/cv", src: CvIcon, isExternal: false },
 ];
 
-function SocialLinks() {
+function SocialLinks({ id }: SocialLinksProps) {
   return (
-    <nav id="SocialLinks__container" aria-label="Social links">
+    <nav id={`SocialLinks__container__${id}`} aria-label="Social links">
       <ul className="flex gap-5 border-2 border-black rounded-xl w-fit p-2">
         {links.map((link: LinkType) => (
-          <SocialLinksNavigation id="SocialLinks__button" link={link} />
+          <SocialLinksNavigation id={`SocialLinks__button__${id}`} link={link} />
         ))}
       </ul>
     </nav>
