@@ -15,7 +15,7 @@ function MenuButtons({ id, menuIsOpen, setMenuIsOpen }: MenuButtonsProps) {
   return (
     <div
       id={`MenuButtons__container__${id}`}
-      className="pt-20 h-screen w-full flex flex-col gap-6 px-5"
+      className="pt-30 h-screen w-full flex flex-col gap-6 px-5"
     >
       {buttons.map(({ text, border }, index: number) => (
         <a
