@@ -28,8 +28,12 @@ function SocialLinks({ id }: SocialLinksProps) {
   return (
     <nav id={`SocialLinks__container__${id}`} aria-label="Social links">
       <ul className="flex gap-5 border-2 border-black rounded-xl w-fit p-2">
-        {links.map((link: LinkType) => (
-          <SocialLinksNavigation id={`SocialLinks__button__${id}`} link={link} />
+        {links.map((link: LinkType, i: number) => (
+          <SocialLinksNavigation
+            id={`SocialLinks__button__${id}`}
+            key={`SocialLinks__button__${id}__${i}`}
+            link={link}
+          />
         ))}
       </ul>
     </nav>
@@ -37,4 +41,3 @@ function SocialLinks({ id }: SocialLinksProps) {
 }
 
 export default SocialLinks;
-     
