@@ -1,4 +1,6 @@
+import CyclingSkills from "@/components/Fragments/CyclingSkills";
 import FadingSkills from "@/components/Fragments/FadingSkills";
+import MyHeadline from "@/components/Fragments/MyHeadline";
 import Header from "@/components/Header/Header";
 import Menu from "@/components/Header/Menu/Menu";
 
@@ -15,7 +17,14 @@ function HomePage({ id }: HomePageProps) {
       <Menu id={`HomePage__menu__${id}`} />
       <Header id={`HomePage__header__${id}`} />
       <div
-        id={`FadingSkills__container__${id}`}
+        id={`HomePage__myHeadline__container__${id}`}
+        className="absolute top-30 left-10"
+      >
+        <MyHeadline id={`HomePage__myHeadline__${id}`} />
+        <CyclingSkills id={`HomePage__cyclingSkills__${id}`} />
+      </div>
+      <div
+        id={`HomePage__fadingSkills__container__${id}`}
         className="absolute top-180 right-10"
       >
         <FadingSkills id={`HomePage__fadingSkills__${id}`} />
