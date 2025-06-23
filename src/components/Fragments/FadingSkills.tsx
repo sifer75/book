@@ -12,7 +12,6 @@ function FadingSkills({ id }: FadingSkillsProps) {
   const stackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    
     function handleScroll() {
       const { scrollY: currentScrollY } = window;
       const { current: stackNode } = stackRef;
@@ -52,7 +51,7 @@ function FadingSkills({ id }: FadingSkillsProps) {
         <span
           id={`FadingSkills__text__${value}__${id}`}
           key={k}
-          className="block text-4xl xs:text-5xl sm:text-6xl lg:text-7xl"
+          className="block text-4xl xs:text-5xl sm:text-6xl lg:text-7xl whitespace-nowrap"
         >
           {value}
         </span>
