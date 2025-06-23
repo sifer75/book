@@ -9,7 +9,7 @@ function Header({ id }: HeaderProps) {
   return (
     <div
       id={`Header__container__${id}`}
-      className="w-full flex items-center justify-end py-3 px-5 gap-5 bg-gray-100"
+      className="w-fit h-fit z-20 top-5 right-5 lg:top-10 lg:right-12 fixed flex items-center gap-5"
     >
       <SocialLinks id={`Header__socialLinks__${id}`} />
       <Theming />
