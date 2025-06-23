@@ -18,17 +18,18 @@ function WrapperSections({ id }: HomePageProps) {
       <Section id={`HomePage__section__${id}`}>
         <div
           id={`WrapperSections__components__container__${id}`}
-          className="top-30 left-10 h-full bg-blue-500 flex flex-col justify-between"
+          className="h-full flex flex-col justify-between"
         >
           <div
             id={`WrapperSections__myHeadline__cyclingSkills__container__${id}`}
+            className="flex flex-col justify-center items-center md:items-start pt-10 md:pt-0"
           >
             <MyHeadline id={`WrapperSections__myHeadline__${id}`} />
             <CyclingSkills id={`WrapperSections__cyclingSkills__${id}`} />
           </div>
           <div
             id={`WrapperSections__fadingSkills__container__${id}`}
-            className="w-full flex justify-end"
+            className="w-full flex justify-center sm:justify-end"
           >
             <FadingSkills id={`WrapperSections__fadingSkills__${id}`} />
           </div>
