@@ -100,7 +100,6 @@ function CyclingSkills({ id }: CyclingSkillsProps) {
     } else {
       restoreCycleSpeed();
     }
-
   }, [cyclingNodeIsHovered, slowdownCycle, restoreCycleSpeed]);
 
   useEffect(() => {
@@ -113,20 +112,24 @@ function CyclingSkills({ id }: CyclingSkillsProps) {
   return (
     <div
       id={`CyclingSkills__container__${id}`}
-      className="border-2 z-10 border-yellow-300 rounded-3xl w-[237px] xs:w-[316px] lg:w-[422px] p-1 h-fit flex overflow-hidden"
+      className="relative border-2 z-20 border-yellow-300 rounded-3xl w-[237px] xs:w-[316px] lg:w-[422px] p-1 h-fit flex overflow-hidden"
       onMouseOver={() => setCyclingNodeIsHovered(true)}
       onMouseOut={() => setCyclingNodeIsHovered(false)}
       onTransitionEnd={cycle}
     >
       <div
-            id={`CyclingSkills__skill__container__${id}`}
-        className="flex relative left-0 transition-[left] duration-[10s] ease-linear z-10"
+        id={`CyclingSkills__skill__container__${id}`}
+        className="flex relative left-0 transition-[left] duration-[10s] ease-linear"
         ref={cyclingNodeRef}
       >
         {softSkillsMultiple.map((value, index) => (
-          <div className="flex mr-1 items-center h-7" id={`CyclingSkills__skill__${id}`} key={index}>
-            <span className="font-Merich mr-1 text-white">{value}&nbsp;</span>
-            <span className="font-Kelsi text-yellow-100">X&nbsp;</span>
+          <div
+            id={`CyclingSkills__skill__${id}`}
+            className="flex mr-1 items-center h-7"
+            key={index}
+          >
+            <span id={`CyclingSkills__skill__${value}__${id}`} className="font-merich mr-1 text-white">{value}&nbsp;</span>
+            <span id={`CyclingSkills__skill__flower__${value}__${id}`} className="font-kelsi text-yellow-100">X&nbsp;</span>
           </div>
         ))}
       </div>
