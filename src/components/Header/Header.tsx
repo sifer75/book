@@ -10,7 +10,10 @@ function Header({ id }: HeaderProps) {
   return (
     <div id={`Header__container__${id}`}>
       <SiteToolbar id={`Header__siteToolbar__${id}`} />
-      <div id={`Header__menu__container__${id}`} className="h-full bg-blue-500">
+      <div
+        id={`Header__menu__container__${id}`}
+        className="h-full bg-blue-500 hidden lg:block"
+      >
         <Menu id={`Header__menu__${id}`} />
       </div>
       <div
