@@ -8,7 +8,7 @@ function MyHeadline({ id }: MyHeadLineProps) {
   return (
     <div
       id={`MyHeadline__container__${id}`}
-      className="w-full xs:flex xs:items-center h-fit transition duration-500 delay-100 flex flex-col items-center sm:items-start z-30"
+      className="xs:flex xs:items-center h-fit transition duration-500 delay-100 flex flex-col items-center sm:items-start z-30"
     >
       <h1
         id={`MyHeadline__texts__${id}`}
