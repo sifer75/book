@@ -3,7 +3,34 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Merich";
+  src: url("./assets/police/Merich.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kelsi";
+  src: url("./assets/police/Kelsi-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("./assets/police/NHaasGroteskTXPro-55Rg.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
+  --font-neue: "Neue", "sans-serif";
+  --font-kelsi: "Kelsi", "sans-serif";
+  --font-merich: "Merich", "sans-serif";
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -117,4 +144,17 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.i {
+  padding: 0 5px;
+  user-select: none;
+  transition: 1s;
+  cursor: default;
+}
+
+.i:hover {
+  transition: 0s;
+  color: #0f0;
+  text-shadow: 0 0 120px #0f0;
 }
