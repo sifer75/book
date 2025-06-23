@@ -27,11 +27,11 @@ const links: LinkType[] = [
 function SocialLinks({ id }: SocialLinksProps) {
   return (
     <nav id={`SocialLinks__container__${id}`} aria-label="Social links">
-      <ul className="flex gap-5 border-2 border-black rounded-xl w-fit p-2">
+      <ul className="flex gap-5 border-2 border-black rounded-xl w-fit p-2 z-20 bg-blue-800">
         {links.map((link: LinkType, i: number) => (
           <SocialLinksNavigation
             id={`SocialLinks__button__${id}`}
-            key={`SocialLinks__button__${id}__${i}`}
+            key={`SocialLinks__button__${i}__${id}`}
             link={link}
           />
         ))}
