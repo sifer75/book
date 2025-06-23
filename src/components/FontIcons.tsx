@@ -25,7 +25,7 @@ function FontIcons({ id }: FontIconsProps) {
   return (
     <div
       id={`FontIcons__container__${id}`}
-      className="w-screen overflow-hidden h-screen text-3xl border border-black relative"
+      className="w-full overflow-hidden h-screen text-3xl border border-black relative"
     >
       <div
         id={`FontIcons__logo__container__${id}`}
