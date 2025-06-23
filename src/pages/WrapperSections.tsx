@@ -24,7 +24,7 @@ function WrapperSections({ id }: HomePageProps) {
         <Menu id={`WrapperSections__menu__${id}`} />
       </div>
       <div className="z-0 inset-0 absolute lg:block">
-        <FontIcons />
+        <FontIcons id={`WrapperSections__fontIcons__${id}`} />
       </div>
       <Section id={`HomePage__section__${id}`}>
         <div
