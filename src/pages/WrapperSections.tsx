@@ -2,9 +2,7 @@ import CyclingSkills from "@/components/Fragments/CyclingSkills";
 import FadingSkills from "@/components/Fragments/FadingSkills";
 import MyHeadline from "@/components/Fragments/MyHeadline";
 import Header from "@/components/Header/Header";
-import Menu from "@/components/Header/Menu/Menu";
 import Section from "@/components/Section";
-import FontIcons from "@/components/FontIcons";
 
 interface HomePageProps {
   id: string;
@@ -16,16 +14,7 @@ function WrapperSections({ id }: HomePageProps) {
       id={`WrapperSections__container__${id}`}
       className="w-full h-screen relative flex"
     >
-      <Header id={`WrapperSections__header__${id}`} />
-      <div
-        id={`WrapperSections__menu__container__${id}`}
-        className="h-full bg-blue-500"
-      >
-        <Menu id={`WrapperSections__menu__${id}`} />
-      </div>
-      <div className="z-0 inset-0 absolute lg:block">
-        <FontIcons id={`WrapperSections__fontIcons__${id}`} />
-      </div>
+      <Header id={`WrapperSections__${id}`} />
       <Section id={`HomePage__section__${id}`}>
         <div
           id={`WrapperSections__components__container__${id}`}
