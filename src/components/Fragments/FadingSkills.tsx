@@ -45,7 +45,7 @@ function FadingSkills({ id }: FadingSkillsProps) {
   return (
     <h2
       id={`FadingSkills__container__${id}`}
-      className="leading-[1] transition-opacity z-10 duration-500 font-Merich text-yellow-100"
+      className="leading-[1] transition-opacity z-10 duration-500 font-merich text-yellow-100"
       ref={stackRef}
     >
       {stack.map((value, k) => (
