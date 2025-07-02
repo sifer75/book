@@ -11,7 +11,7 @@ const shuffleArray = (array: IconDefinition[]) => {
 };
 
 const renderIcons = () => {
-  const shuffleLogos = shuffleArray([...logos]);
+  const shuffleLogos = shuffleArray([...logos, ...logos]);
   return shuffleLogos.map((icon, index: number) => (
     <FontAwesomeIcon
       key={index}
